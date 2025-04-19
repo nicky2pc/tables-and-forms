@@ -6,11 +6,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-    <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
-</main>
-</body>
+    <main>
+        <h1>Найди себе друга!</h1>
+        <form action="/pets/orders" method="POST">
+            <label for="name">Имя питомца:</label>
+            <input type="text" id="name" name="name" placeholder="Мурзик" required minlength="3" maxlength="50"><br><br>
+    
+            <label for="gender">Пол питомца:</label>
+            <select id="gender" name="gender" required>
+                <option value="">--Выберите--</option>
+                <option value="boy">мальчик</option>
+                <option value="girl">девочка</option>
+            </select><br><br>
+    
+            <label for="eyeColor">Цвет глаз:</label>
+            <input type="color" id="eyeColor" name="eyeColor" required><br><br>
+    
+            <label for="tailLength">Длина хвоста (в см):</label>
+            <input type="range" id="tailLength" name="tailLength" min="0" max="100" required><br><br>
+    
+            <label for="dateOfBirth">Дата рождения питомца:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required><br><br>
+    
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 999 123-45-67" required><br><br>
+    
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+    
+            <label for="petType">Тип питомца:</label>
+            <select id="petType" name="petType" required>
+                <option value="">--Выберите--</option>
+                <option value="cat">Кошка</option>
+                <option value="dog">Собака</option>
+                <option value="tiger">Тигр</option>
+            </select><br><br>
+    
+            <label>
+                <input type="checkbox" name="rules" required value="true">
+                Я согласен с правилами размещения заявки
+            </label><br><br>
+    
+            <button type="submit">Отправить</button>
+            <button type="reset">Сбросить</button>
+        </form>
+    
+    
+    </main>
+    </body>
 </html>
